@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Имя_в_квадрате
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string userName;
+            string userChar;
+            int charStringLenght;
+            Console.Write("Ваше имя : ");
+            userName = Console.ReadLine();
+            Console.Write("Ваш символ : ");
+            userChar = Console.ReadLine();
+            charStringLenght = (userName.Length + 1);
+
+            for (int i = charStringLenght; i >= 0; i--)
+            {
+                Console.SetCursorPosition((5 + i), 4);
+                Console.WriteLine(userChar);
+                Console.SetCursorPosition(5 + i, 6);
+                Console.WriteLine(userChar);
+                Console.SetCursorPosition(5, 5);
+                Console.WriteLine(userChar + userName + userChar);
+            }
+            Console.ReadKey();
+        }
+    }
+}
